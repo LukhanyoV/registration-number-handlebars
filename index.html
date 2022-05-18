@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrations</title>
+    <link rel="stylesheet" href="./css/registration_number.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <div class="heading">
+                <h1>Registrations WebApp</h1>
+            </div>
+            <form class="regForm">
+                <div class="error"></div>
+                <div class="input">
+                    <div class="inputName">
+                        <h2>Registration Number:</h2>
+                    </div>
+                    <div class="inputField">
+                        <input type="text" class="inputBox">
+                    </div>
+                </div>
+                <div class="valid">
+                    <div>
+                        Valid Formats: <br>
+                        CAA 123456, CA 555-222, CY 777 777
+                    </div>
+                    <br>
+                    <div>
+                        Accepted registration codes: <br>
+                        CAA, CA, CY, CJ, CK, CL
+                    </div>
+
+                </div>
+                <div class="buttons">
+                    <button class="addBtn">ADD</button>
+                    <button class="resetBtn">RESET</button>
+                </div>
+                <div class="towns">
+                    <select name="town" id="town">
+                        <option value="ALL">Select Town</option>
+                        <option value="CA">Cape Town</option>
+                        <option value="CY">Bellville</option>
+                        <option value="CJ">Paarl</option>
+                        <option value="CK">Malmesbury</option>
+                        <option value="CL">Stellenbosch</option>
+                    </select>
+                </div>
+                <div class="display"></div>
+                <div class="footer">
+                    &copy; LukhanyoV 2022
+                </div>
+            </form>
+        </div>
+        <div class="form">
+            <div class="heading">
+                <h1>Registrations WebApp</h1>
+            </div>
+            <form class="regFormBars">
+                <div class="errorBars"></div>
+                <div class="input">
+                    <div class="inputName">
+                        <h2>Registration Number:</h2>
+                    </div>
+                    <div class="inputField">
+                        <input type="text" class="inputBoxBars">
+                    </div>
+                </div>
+                <div class="valid">
+                    <div>
+                        Valid Formats: <br>
+                        CAA 123456, CA 555-222, CY 777 777
+                    </div>
+                    <br>
+                    <div>
+                        Accepted registration codes: <br>
+                        CAA, CA, CY, CJ, CK, CL
+                    </div>
+
+                </div>
+                <div class="buttons">
+                    <button class="addBtnBars">ADD</button>
+                    <button class="resetBtnBars">RESET</button>
+                </div>
+                <div class="towns">
+                    <select name="town" id="townBars">
+                        <option value="ALL">Select Town</option>
+                        <option value="CA">Cape Town</option>
+                        <option value="CY">Bellville</option>
+                        <option value="CJ">Paarl</option>
+                        <option value="CK">Malmesbury</option>
+                        <option value="CL">Stellenbosch</option>
+                    </select>
+                </div>
+                <script type="script/x-template" class="displayTemplate">
+                    <div class="display">
+                        {{#each regNumbers}}
+                            <span class="list-item">{{this}}</span>
+                        {{/each}}
+                        {{#unless regNumbers}}
+                            <h3 class="not-avilable">No registrations available</h3>
+                        {{/unless}}
+                    </div>
+                </script>
+                <div class="displayData"></div>
+                <div class="footer">
+                    &copy; LukhanyoV 2022
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- DOM only -->
+    <script src="./js/registrations.js"></script>
+    <script src="./js/registration_number.js"></script>
+    <!-- Handlebars Template -->
+    <script src="./js/registrations.bars.js"></script>
+    <script src="./js/registration_number.bars.js"></script>
+</body>
+</html>

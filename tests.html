@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mocha Tests for Factory Function</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/9.0.2/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/9.0.2/mocha.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.min.js"></script>
+  </head>
+  <body>
+    <div id="mocha"></div>
+ 
+    <script>
+      mocha.setup('bdd');
+      const assert = chai.assert;
+    </script>
+ 
+    <!-- // link your javascript tests here -->
+    <script src="./js/registrations.js"></script>
+    <script src="./tests/registrations.test.js"></script>
+ 
+    <script class="mocha-exec">
+      mocha.checkLeaks();
+      mocha.run();
+    </script>
+  </body>
+</html>
