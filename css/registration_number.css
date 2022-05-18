@@ -93,3 +93,13 @@
 .not-avilable {
     margin: auto auto;
 }
+
+@media screen and (max-width: 725px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .form {
+        margin-bottom: 1em;
+    }
+}
